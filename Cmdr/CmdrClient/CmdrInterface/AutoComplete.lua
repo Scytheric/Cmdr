@@ -129,7 +129,7 @@ return function (Cmdr)
 		local extra = (options.at and options.at or (#table.concat(words, " ") + 1)) * 7
 
 		-- Update the auto complete container
-		Gui.Position = UDim2.new(0, Entry.TextBox.AbsolutePosition.X - 10 + extra, 0, Entry.TextBox.AbsolutePosition.Y + 30)
+		Gui.Position = UDim2.new(0, Entry.TextBox.AbsolutePosition.X - 10 + extra, 0, Entry.TextBox.AbsolutePosition.Y + 40)
 		Gui.Size = UDim2.new(0, autocompleteWidth, 0, Gui.UIListLayout.AbsoluteContentSize.Y)
 		Gui.Visible = true
 

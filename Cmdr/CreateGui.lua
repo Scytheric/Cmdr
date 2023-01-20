@@ -25,7 +25,7 @@ return function ()
 
 	local Autocomplete = Instance.new("Frame")
 	Autocomplete.BackgroundColor3 = Color3.fromRGB(12, 12, 12)
-	Autocomplete.BackgroundTransparency = 0.32
+	Autocomplete.BackgroundTransparency = 0.5
 	Autocomplete.BorderSizePixel = 0
 	Autocomplete.Name = "Autocomplete"
 	Autocomplete.Position = UDim2.new(0, 167, 0, 75)
@@ -70,18 +70,17 @@ return function ()
 	UIListLayout2.Parent = Autocomplete
 
 	local Title = Instance.new("Frame")
-	Title.BackgroundColor3 = Color3.fromRGB(14, 31, 52)
+	Title.BackgroundColor3 = Color3.fromRGB(15, 21, 29)
 	Title.BackgroundTransparency = 0.5
 	Title.BorderSizePixel = 0
 	Title.LayoutOrder = -2
 	Title.Name = "Title"
 	Title.Size = UDim2.new(1, 0, 0, 40)
 	Title.Parent = Autocomplete
-	FrameCorners:Clone().Parent = Autocomplete
 
 	local Description = Instance.new("Frame")
 	Description.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-	Description.BackgroundTransparency = 0.2
+	Description.BackgroundTransparency = 0.5
 	Description.BorderSizePixel = 0
 	Description.LayoutOrder = -1
 	Description.Name = "Description"
@@ -89,8 +88,8 @@ return function ()
 	Description.Parent = Autocomplete
 
 	local TextButton = Instance.new("TextButton")
-	TextButton.BackgroundColor3 = Color3.fromRGB(36, 54, 99)
-	TextButton.BackgroundTransparency = 0.2
+	TextButton.BackgroundColor3 = Color3.fromRGB(45, 55, 80)
+	TextButton.BackgroundTransparency = 0.5
 	TextButton.BorderSizePixel = 0
 	TextButton.Font = Enum.Font.Code
 	TextButton.Size = UDim2.new(1, 0, 0, 30)
@@ -99,6 +98,13 @@ return function ()
 	TextButton.TextSize = 14
 	TextButton.TextXAlignment = Enum.TextXAlignment.Left
 	TextButton.Parent = Autocomplete
+
+	local TextButtonPadding = Instance.new("UIPadding")
+	TextButtonPadding.PaddingBottom = UDim.new(0, 5)
+	TextButtonPadding.PaddingLeft = UDim.new(0, 5)
+	TextButtonPadding.PaddingRight = UDim.new(0, 5)
+	TextButtonPadding.PaddingTop = UDim.new(0, 5)
+	TextButtonPadding.Parent = TextButton
 
 	local UIListLayout3 = Instance.new("UIListLayout")
 	UIListLayout3.FillDirection = Enum.FillDirection.Horizontal
