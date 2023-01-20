@@ -3,6 +3,7 @@ name = "scytheric/lunar-cmdr"
 description = "Heavily modified version of Cmdr to suite my needs."
 version = "0.1.3"
 license = "MIT"
+authors = ["evaera", "Scytheric"]
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
 
