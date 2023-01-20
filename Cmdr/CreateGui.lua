@@ -19,10 +19,6 @@ return function ()
 	Frame.Visible = false
 	Frame.Parent = Cmdr
 
-	local FrameCorners = Instance.new("UICorner")
-	FrameCorners.CornerRadius = UDim.new(0, 6)
-	FrameCorners.Parent =  Frame
-
 	local Autocomplete = Instance.new("Frame")
 	Autocomplete.BackgroundColor3 = Color3.fromRGB(12, 12, 12)
 	Autocomplete.BackgroundTransparency = 0.5
@@ -32,7 +28,6 @@ return function ()
 	Autocomplete.Size = UDim2.new(0, 200, 0, 200)
 	Autocomplete.Visible = false
 	Autocomplete.Parent = Cmdr
-	FrameCorners:Clone().Parent = Autocomplete
 
 	local UIListLayout = Instance.new("UIListLayout")
 	UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder

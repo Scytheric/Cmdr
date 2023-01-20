@@ -28,7 +28,7 @@ Line.Parent = nil
 
 --- Update the text entry label
 function Window:UpdateLabel()
-	Entry.TextLabel.Text = Player.Name .. "@" .. self.Cmdr.PlaceName .. "$"
+	Entry.TextLabel.Text = Player.Name .. " @ " .. self.Cmdr.PlaceName .. " >"
 end
 
 --- Get the text entry label
