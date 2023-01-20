@@ -1,7 +1,7 @@
 [package]
 name = "scytheric/lunar-cmdr"
 description = "Heavily modified version of Cmdr to suite my needs."
-version = "0.1.1"
+version = "0.1.2"
 license = "MIT"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
