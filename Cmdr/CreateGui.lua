@@ -6,8 +6,8 @@ return function ()
 	Cmdr.AutoLocalize = false
 
 	local Frame = Instance.new("ScrollingFrame")
-	Frame.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
-	Frame.BackgroundTransparency = 0.4
+	Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+	Frame.BackgroundTransparency = 0.2
 	Frame.BorderSizePixel = 0
 	Frame.CanvasSize = UDim2.new(0, 0, 0, 100)
 	Frame.Name = "Frame"
@@ -20,8 +20,8 @@ return function ()
 	Frame.Parent = Cmdr
 
 	local Autocomplete = Instance.new("Frame")
-	Autocomplete.BackgroundColor3 = Color3.fromRGB(59, 59, 59)
-	Autocomplete.BackgroundTransparency = 0.5
+	Autocomplete.BackgroundColor3 = Color3.fromRGB(12, 12, 12)
+	Autocomplete.BackgroundTransparency = 0.32
 	Autocomplete.BorderSizePixel = 0
 	Autocomplete.Name = "Autocomplete"
 	Autocomplete.Position = UDim2.new(0, 167, 0, 75)
