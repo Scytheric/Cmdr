@@ -19,6 +19,10 @@ return function ()
 	Frame.Visible = false
 	Frame.Parent = Cmdr
 
+	local FrameCorners = Instance.new("UICorner")
+	FrameCorners.CornerRadius = UDim.new(0, 6)
+	FrameCorners.Parent =  Frame
+
 	local Autocomplete = Instance.new("Frame")
 	Autocomplete.BackgroundColor3 = Color3.fromRGB(12, 12, 12)
 	Autocomplete.BackgroundTransparency = 0.32
@@ -28,6 +32,7 @@ return function ()
 	Autocomplete.Size = UDim2.new(0, 200, 0, 200)
 	Autocomplete.Visible = false
 	Autocomplete.Parent = Cmdr
+	FrameCorners:Clone().Parent = Autocomplete
 
 	local UIListLayout = Instance.new("UIListLayout")
 	UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
@@ -65,16 +70,17 @@ return function ()
 	UIListLayout2.Parent = Autocomplete
 
 	local Title = Instance.new("Frame")
-	Title.BackgroundColor3 = Color3.fromRGB(59, 59, 59)
-	Title.BackgroundTransparency = 0.2
+	Title.BackgroundColor3 = Color3.fromRGB(14, 31, 52)
+	Title.BackgroundTransparency = 0.5
 	Title.BorderSizePixel = 0
 	Title.LayoutOrder = -2
 	Title.Name = "Title"
 	Title.Size = UDim2.new(1, 0, 0, 40)
 	Title.Parent = Autocomplete
+	FrameCorners:Clone().Parent = Autocomplete
 
 	local Description = Instance.new("Frame")
-	Description.BackgroundColor3 = Color3.fromRGB(59, 59, 59)
+	Description.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 	Description.BackgroundTransparency = 0.2
 	Description.BorderSizePixel = 0
 	Description.LayoutOrder = -1
@@ -83,8 +89,8 @@ return function ()
 	Description.Parent = Autocomplete
 
 	local TextButton = Instance.new("TextButton")
-	TextButton.BackgroundColor3 = Color3.fromRGB(59, 59, 59)
-	TextButton.BackgroundTransparency = 0.5
+	TextButton.BackgroundColor3 = Color3.fromRGB(36, 54, 99)
+	TextButton.BackgroundTransparency = 0.2
 	TextButton.BorderSizePixel = 0
 	TextButton.Font = Enum.Font.Code
 	TextButton.Size = UDim2.new(1, 0, 0, 30)
@@ -122,7 +128,7 @@ return function ()
 	TextLabel.Size = UDim2.new(0, 0, 0, 20)
 	TextLabel.AutomaticSize = Enum.AutomaticSize.X
 	TextLabel.Text = ""
-	TextLabel.TextColor3 = Color3.fromRGB(255, 223, 93)
+	TextLabel.TextColor3 = Color3.fromRGB(93, 131, 255)
 	TextLabel.TextSize = 14
 	TextLabel.TextXAlignment = Enum.TextXAlignment.Left
 	TextLabel.Parent = Entry
