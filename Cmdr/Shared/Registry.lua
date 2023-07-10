@@ -244,7 +244,9 @@ function Registry:RegisterHook(hookName, callback, priority)
 	end
 
 	table.insert(self.Hooks[hookName], { callback = callback; priority = priority or 0; } )
-	table.sort(self.Hooks[hookName], function(a, b) return a.priority < b.priority end)
+	table.sort(self.Hooks[hookName], function(a, b)
+		return a.priority < b.priority
+	end)
 end
 
 -- Backwards compatability (deprecated)

@@ -153,10 +153,10 @@ function Dispatcher:RunHooks(hookName, commandContext, ...)
 	end
 
 	for _, hook in ipairs(self.Registry.Hooks[hookName]) do
-		local value = hook.callback(commandContext, ...)
+		local value: string?, color: Color3? = hook.callback(commandContext, ...)
 
 		if value ~= nil then
-			return tostring(value)
+			return tostring(value), (color or Color3.new(1, 1, 1))
 		end
 	end
 end
